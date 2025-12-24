@@ -1,0 +1,26 @@
+{
+  "name": "goldenbrix-bot",
+  "version": "1.0.0",
+  "description": "The world's first Tipping Publicist on Telegram",
+  "main": "index.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ton",
+    "usdt",
+    "payments",
+    "tipping"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.22.0"
+  }
+}
