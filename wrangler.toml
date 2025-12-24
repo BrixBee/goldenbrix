@@ -1,0 +1,55 @@
+# ============================================
+# GOLDENBRIX - WORKER CONFIGURATION
+# ============================================
+
+name = "goldenbrix-bot"
+main = "index.js"
+compatibility_date = "2024-12-01"
+
+# Development mode (set to false for production)
+workers_dev = true
+
+# ============================================
+# D1 DATABASE BINDING
+# ============================================
+
+[[d1_databases]]
+binding = "DB"
+database_name = "goldenbrix-db"
+database_id = "YOUR_DATABASE_ID_HERE"
+# ^ Replace after running: wrangler d1 create goldenbrix-db
+
+# ============================================
+# ENVIRONMENT VARIABLES
+# ============================================
+
+[vars]
+# Telegram Bot Token (from @BotFather)
+TELEGRAM_BOT_TOKEN = "8315180554:AAHulNPgC1f0QhL5IKrAir-vVQpMTOL53RA"
+
+# Your TON wallet address (receives boost fees)
+GOLDENBRIX_BOOST_ADDRESS = "UQAuIWtCF5aD9kpMhY52-fh3ayNO2A9IsucodSh_AoLUhWFG"
+
+# Your announcement channel
+CHANNEL_USERNAME = "@GoldenBrixOfficial"
+
+# TON blockchain API endpoint
+TON_API = "https://toncenter.com/api/v2"
+
+# ============================================
+# CRON TRIGGERS (Payment Detection)
+# ============================================
+
+[triggers]
+# Run payment detection every minute
+crons = ["* * * * *"]
+
+# ============================================
+# BUILD CONFIGURATION
+# ============================================
+
+[build]
+command = ""
+
+[build.upload]
+format = "service-worker"
