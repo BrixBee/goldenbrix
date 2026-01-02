@@ -16,7 +16,7 @@ workers_dev = true
 [[d1_databases]]
 binding = "DB"
 database_name = "goldenbrix-db"
-database_id = "YOUR_DATABASE_ID_HERE"
+database_id = "94de763a-5f30-493e-ba94-327c010f89b9"
 # ^ Replace after running: wrangler d1 create goldenbrix-db
 
 # ============================================
